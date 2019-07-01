@@ -5,8 +5,10 @@ follows: public static boolean isEven(int number)*/
 package com.stackroute.junit;
 
 public class EvenNumberCheck {
-    public static boolean isEven(int number) {
-        if(number!=0) {
+    public static boolean isEven(int number) //initialized number to check even or not
+    {
+        if(number!=0) //logic for even number
+        {
             if (number % 2 == 0) {
                 return true;
             } else {

@@ -8,30 +8,14 @@ public class PowerTest {
     PowerofFour power;
 
     @Before
-    public void setUp() {
-        System.out.println("Before");
-
+    public void setUp()
+    {
 
     }
 
     @After
     public void tearDown() {
-        System.out.println("After");
         power = null;
-
-    }
-
-    @BeforeClass
-    public static void setUpBeforeClass() {
-        System.out.println("BeforeClass");
-
-
-    }
-
-    @AfterClass
-    public static void tearDownAfterClass() {
-        System.out.println("AfterClass");
-
 
     }
 

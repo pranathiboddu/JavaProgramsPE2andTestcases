@@ -9,15 +9,15 @@ import java.io.IOException;
 
 public class ReadFile {
     public String readFile(String filePath) throws IOException {
-        FileReader fr=new FileReader(filePath);
+        FileReader fr=new FileReader(filePath); // reading the file
         int i;
         String out="";
         while((i=fr.read())!=-1)
             out=out+((char)i);
         fr.close();
-        int length=out.length();
+        int length=out.length();//find the length of text file
         out=out+"The length is "+length;
-        System.out.println(out.toUpperCase());
+        System.out.println(out.toUpperCase()); // converting the text file into uppercase
         return out.toUpperCase();
     }
 

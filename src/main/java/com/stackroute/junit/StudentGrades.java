@@ -7,19 +7,19 @@ method for each of the computations.*/
 package com.stackroute.junit;
 
 public class StudentGrades {
-    public static String gradeInput(int NumberOfStudent, int[] NGrades)
+    public static String gradeInput(int NumberOfStudent, int[] NGrades)//initialized number of students and array to store grades
     {
-        if(NumberOfStudent<0  || NumberOfStudent >100)
+        if(NumberOfStudent<0  || NumberOfStudent >100) //checking if number of students are between 0 to 100
             return "given students input is wrong";
 
-        if(NGrades.length!=NumberOfStudent)
+        if(NGrades.length!=NumberOfStudent) //checking if array of grades length and number of students are equal or not
         {
             return "Wrong Input";
         }
 
         for (int i =0;i<NumberOfStudent;i++)
         {
-            if(NGrades[i]<0 || NGrades[i]>100)
+            if(NGrades[i]<0 || NGrades[i]>100) //checking if grades are between 0 to 100
             {
                 return "given grades are wrong";
             }
@@ -31,13 +31,13 @@ public class StudentGrades {
 
         for (int i =0;i<NumberOfStudent;i++)
         {
-            tot = tot + NGrades[i];
+            tot = tot + NGrades[i]; //calculating total sum of grades
         }
 
-        String avg = avg(tot,NumberOfStudent);
+        String avg = avg(tot,NumberOfStudent); //method to calculate average
 
-        int min = min(NGrades,NumberOfStudent);
-        int max = max(NGrades,NumberOfStudent);
+        int min = min(NGrades,NumberOfStudent); // method to calculate min
+        int max = max(NGrades,NumberOfStudent); // method to calculate max
 
         Result = "The average is "+avg+" The minimum is "+min+" The maximum is "+max;
 
@@ -47,7 +47,7 @@ public class StudentGrades {
     public static String avg(double total,int N){
 
         String s="";
-        return s+(total/N);
+        return s+(total/N); //calculating average
     }
 
     public static int min(int[] NGrades, int N)
@@ -57,7 +57,7 @@ public class StudentGrades {
         {
             if(NGrades[i]<min)
             {
-                min = NGrades[i];
+                min = NGrades[i]; //calculating minimum
             }
         }
 
@@ -71,7 +71,7 @@ public class StudentGrades {
         {
             if(NGrades[i]>max)
             {
-                max = NGrades[i];
+                max = NGrades[i]; //calculating maximun
             }
         }
 
